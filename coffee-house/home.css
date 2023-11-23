@@ -166,14 +166,18 @@ h1 {
 
 .offer-menu-btn-cup {
     margin-left: 8px;
-    display: none;
     opacity: 0;
-    transition: all .3s ease;
+    max-width: 0;
+    overflow: hidden;
+    transition: max-width .3s ease;
 }
 
 .offer-menu-btn:hover .offer-menu-btn-cup {
-    display: block;
     opacity: 1;
+    max-width: 40px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-width .9s ease;
 }
 
 .favorite-coffee-container {
@@ -295,27 +299,30 @@ path {
 
 .about-imgs {
     border-radius: 20px;
+    transition: background-size .3s ease;
 }
 
 .about-img1 {
     background: url(img/about-1.jpg);
     grid-row-start: 1;
     grid-row-end: 3;
-    transition: background-size 0.8s ease;
     background-position: center;
+    background-size: 110%;
 
 }
+
 
 .about-img2 {
     background: url(img/about-2.jpg);
     background-position: center;
+    background-size: 110%;
 
 }
 
 .about-img3 {
     background: url(img/about-3.jpg);
     background-position: center;
-
+    background-size: 110%;
 }
 
 .about-img4 {
@@ -323,9 +330,11 @@ path {
     grid-row-start: 2;
     grid-row-end: 4;
     background-position: center;
+    background-size: 110%;
 }
 
 .about-imgs:hover {
     cursor: pointer;
     background-size: 100%;
+    transition: background-size .6s ease;
 }
