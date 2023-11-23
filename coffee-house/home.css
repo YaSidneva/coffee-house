@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 ul[class],
 ol[class] {
     padding: 0;
@@ -166,10 +167,13 @@ h1 {
 .offer-menu-btn-cup {
     margin-left: 8px;
     display: none;
+    opacity: 0;
+    transition: all .3s ease;
 }
 
 .offer-menu-btn:hover .offer-menu-btn-cup {
     display: block;
+    opacity: 1;
 }
 
 .favorite-coffee-container {
@@ -272,4 +276,56 @@ path {
 
 .slider-controller-active {
     border-color: #665F55;
+}
+
+.about-container {
+    height: 1325px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.about-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    grid-template-rows: 430px 120px 430px;
+}
+
+.about-imgs {
+    border-radius: 20px;
+}
+
+.about-img1 {
+    background: url(img/about-1.jpg);
+    grid-row-start: 1;
+    grid-row-end: 3;
+    transition: background-size 0.8s ease;
+    background-position: center;
+
+}
+
+.about-img2 {
+    background: url(img/about-2.jpg);
+    background-position: center;
+
+}
+
+.about-img3 {
+    background: url(img/about-3.jpg);
+    background-position: center;
+
+}
+
+.about-img4 {
+    background: url(img/about-4.jpg);
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-position: center;
+}
+
+.about-imgs:hover {
+    cursor: pointer;
+    background-size: 100%;
 }
