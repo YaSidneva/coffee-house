@@ -98,7 +98,10 @@ nav {
 .menu-item {
     text-decoration: none;
     color: #403F3D;
-    border-bottom: 2px solid #E1D4C9;
+    border-bottom: 2px solid;
+    border-color: #E1D4C9;
+    padding-bottom: 4px;
+    position: relative;
 }
 
 .coffee-menu {
@@ -106,13 +109,33 @@ nav {
     justify-content: space-between;
     align-items: center;
     width: 72px;
-    border-bottom: 2px solid #E1D4C9;
+    border-bottom: 2px solid;
+    border-color: #E1D4C9;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-.menu-item:hover,
-.coffee-menu:hover {
+.coffee-menu::after,
+.menu-item::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #403F3D;
+    transition: width 0.3s ease;
+}
+
+.coffee-menu::after,
+.menu-item::after {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.coffee-menu:hover::after,
+.menu-item:hover:after {
+    width: 100%;
     cursor: pointer;
-    border-color: #403F3D;
 }
 
 .enjoy-container {
@@ -213,6 +236,8 @@ h2 {
     border-radius: 100px;
     justify-content: center;
     align-items: center;
+    background-color: none;
+    transition: background-color 1s ease;
 }
 
 .arrow:hover {
@@ -337,4 +362,76 @@ path {
     cursor: pointer;
     background-size: 100%;
     transition: background-size .6s ease;
+}
+
+.mobile-app-container {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-app-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 342px;
+    max-width: 630px;
+}
+
+.mobile-app-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.mobile-app-btns {
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    width: 420px;
+}
+
+.mobile-app-btn {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    border: 1px solid #665F55;
+    border-radius: 100px;
+    padding-left: 20px;
+    background-color: none;
+    transition: background-color 1s ease;
+}
+
+.mobile-app-btn:hover {
+    background-color: #665F55;
+    color: #E1D4C9;
+}
+
+.mobile-app-btn:hover path {
+    stroke: #E1D4C9;
+    fill: #E1D4C9;
+}
+
+.mobile-app-icon {
+    width: 36px;
+    height: 36px;
+    fill: #403F3D;
+}
+
+.mobile-app-btn-description {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 8px;
+}
+
+.mobile-app-btn-text {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.mobile-app-btn-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
 }
