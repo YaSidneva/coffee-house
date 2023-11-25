@@ -145,10 +145,6 @@ nav {
     cursor: pointer;
 }
 
-.coffee-menu:hover {
-    cursor: pointer;
-}
-
 .offer-container {
     height: 236px;
     display: flex;
@@ -447,7 +443,7 @@ h2 {
 
 .contacts-info-icon path {
     stroke: #E1D4C9;
-    fill: #665F55;
+    fill: none;
 }
 
 .clock path {

@@ -124,6 +124,10 @@ nav {
     padding-bottom: 4px;
 }
 
+.menu-link {
+    display: contents;
+}
+
 .coffee-menu::after,
 .menu-item::after {
     content: "";
@@ -556,7 +560,7 @@ footer {
 
 .contacts-info-icon path {
     stroke: #E1D4C9;
-    fill: #665F55;
+    fill: none;
 }
 
 .clock path {
