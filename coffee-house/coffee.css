@@ -111,6 +111,7 @@ nav {
     border-color: #E1D4C9;
     padding-bottom: 4px;
     position: relative;
+    color: #403F3D;
 }
 
 .coffee-menu {
@@ -121,6 +122,7 @@ nav {
     border-bottom: 2px solid;
     border-color: #403F3D;
     position: relative;
+    color: #403F3D;
     padding-bottom: 4px;
 }
 
@@ -187,19 +189,21 @@ h1 {
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    transition: all .8s ease;
+    transition: all 1s ease;
 
 }
 
 .tab-item:hover {
     background-color: #403F3D;
     color: #E1D4C9;
+    border-color: #E1D4C9;
 }
 
 .tab-item-active {
     background-color: #403F3D;
     border-color: #665F55;
     color: #E1D4C9;
+    border: none;
 }
 
 .tab-item-active {
@@ -219,6 +223,7 @@ h1 {
     margin-right: 8px;
     border-radius: 100px;
     background-color: #C1B6AD;
+    transition: all 1s ease;
 }
 
 .tab-item:hover .border-offer-icon {
@@ -242,6 +247,7 @@ h1 {
     transition: background-size .6s ease;
     border: 1px solid #C1B6AD;
     border-radius: 40px;
+    color: #403F3D;
 }
 
 .coffee-menu-card:hover {
@@ -400,12 +406,13 @@ h2 {
     align-items: center;
     justify-content: center;
     background-color: #665F55;
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }
 
 .contacts-offer-link-border:hover {
     background-color: #E1D4C9;
     cursor: pointer;
+    border: none;
 }
 
 .contacts-offer-link-border:hover path {
@@ -421,7 +428,7 @@ h2 {
 
 .contacts-offer-links-icon path {
     stroke: #E1D4C9;
-    fill: #665F55;
+    fill: none;
     width: 24px;
     height: 24px;
 }

@@ -122,6 +122,7 @@ nav {
     border-color: #E1D4C9;
     position: relative;
     padding-bottom: 4px;
+    color: #403F3D;
 }
 
 .menu-link {
@@ -160,6 +161,8 @@ nav {
     border-radius: 40px;
     background: url("img/img-hero.jpg");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
 }
 
@@ -202,6 +205,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #403F3D
 }
 
 .offer-menu-btn-cup {
@@ -228,6 +232,7 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    color: #403F3D;
 }
 
 h2 {
@@ -254,7 +259,7 @@ h2 {
     justify-content: center;
     align-items: center;
     background-color: none;
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }
 
 .arrow:hover {
@@ -318,6 +323,7 @@ path {
 .slider-controller {
     width: 40px;
     border-top: 4px solid #C1B6AD;
+    border-radius: 100px;
 }
 
 .slider-controller-active {
@@ -393,6 +399,7 @@ path {
     justify-content: space-between;
     height: 342px;
     max-width: 630px;
+    color: #403F3D;
 }
 
 .mobile-app-text {
@@ -416,7 +423,7 @@ path {
     border-radius: 100px;
     padding-left: 20px;
     background-color: none;
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }
 
 .mobile-app-btn:hover {
@@ -494,12 +501,13 @@ footer {
     align-items: center;
     justify-content: center;
     background-color: #665F55;
-    transition: background-color 1s ease;
+    transition: all 1s ease;
 }
 
 .contacts-offer-link-border:hover {
     background-color: #E1D4C9;
     cursor: pointer;
+    border: none;
 }
 
 .contacts-offer-link-border:hover path {
@@ -515,7 +523,7 @@ footer {
 
 .contacts-offer-links-icon path {
     stroke: #E1D4C9;
-    fill: #665F55;
+    fill: none;
     width: 24px;
     height: 24px;
 }
