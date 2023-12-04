@@ -694,13 +694,13 @@ h2 {
         background-color: inherit;
         border: 1px solid #C1B6AD;
     }
-    
+
     .contacts-offer-link-border:hover path {
         stroke: #E1D4C9;
-        
+
     }
 
-    
+
     .contact-hover:hover {
         cursor: auto;
     }
@@ -708,4 +708,68 @@ h2 {
     .contact-hover:hover::before {
         width: 0;
     }
+}
+
+/* MOBILE */
+@media all and (max-width: 380px) {
+    .container {
+        width: 380px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .offer-container {
+        height: 206px;
+    }
+
+    .tabs {
+        width: 345px;
+    }
+
+    main {
+        height: 2490px;
+    }
+
+    .coffee-menu-tab {
+        height: 2244px;
+    }
+
+    .coffee-menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .coffee-menu-card {
+        height: 506px;
+        width: 310px;
+    }
+
+    .coffee-menu-card-img {
+        width: 100%;
+    }
+
+    .contacts-container {
+        height: 526px;
+        padding: 20px 16px;
+    }
+
+    .contacts-offer {
+        height: 180px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .contacts-info {
+        height: 186px;
+    }
+
+
+
 }
