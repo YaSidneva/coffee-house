@@ -614,6 +614,36 @@ footer {
     cursor: pointer;
 }
 
+/* BREAKPOINTS */
+@media all and  (max-width: 1295px){
+    .about-images {
+        height: 100%;
+        margin-top: 40px;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .about-imgs {
+        background-repeat: no-repeat;
+        background-size: 110%;
+    }
+
+    .about-imgs:hover {
+        cursor: auto;
+        background-size: 100%;
+        transition: background-size .6s ease;
+    }
+
+    .mobile-app-container {
+        height: 1072px;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .mobile-app-description {
+        max-width: 688px;
+    }
+}
+
 
 /* TABLET */
 @media all and (max-width: 768px) {
@@ -840,7 +870,6 @@ footer {
     .about-imgs:hover {
         cursor: auto;
         background-size: inherit;
-        transition: none;
     }
 
     .mobile-app-btn:hover {
@@ -980,3 +1009,4 @@ footer {
         height: 186px;
     }
 }
+
