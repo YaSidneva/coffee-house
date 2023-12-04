@@ -381,6 +381,10 @@ h1 {
     justify-content: space-evenly;
 }
 
+.refresh {
+    display: none;
+}
+
 h2 {
     font-weight: 600;
     font-size: 60px;
@@ -519,9 +523,62 @@ h2 {
     cursor: pointer;
 }
 
+
+/* BREAKPOINTS */
+@media all and (max-width: 1295px) {
+    .coffee-menu-tab {
+        margin-top: 40px;
+    }
+
+    .coffee-menu-container {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 0;
+        margin: 0;
+        padding-left: 14px;
+        padding-right: 14px;
+        height: max-content;
+        margin-bottom: 100px;
+    }
+
+    .coffee-menu-card-img {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .coffee-menu-card:hover .coffee-menu-card-img {
+        background-size: cover;
+    }
+
+    .contacts-container {
+        padding-left: 60px;
+    }
+}
+
+@media all and (max-width: 960px) {
+    .coffee-menu-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacts-container {
+        padding-left: 20px;
+    }
+
+}
+
+@media all and (max-width: 858px) {
+    .offer-container {
+        height: 311px;
+    }
+}
+
+
+
+/* TABLET */
 @media all and (max-width: 768px) {
     .container {
-        width: 768px;
+        max-width: 768px;
+        width: 100%;
     }
 
     nav {
@@ -641,7 +698,6 @@ h2 {
         flex-direction: column;
         padding-left: 60px;
         padding-right: 60px;
-        margin-top: 100px;
     }
 
     .contacts-offer {
@@ -651,7 +707,6 @@ h2 {
     .contacts-info {
         max-width: none;
     }
-
     *:hover {
         cursor: auto;
     }
@@ -686,7 +741,7 @@ h2 {
     }
 
     .coffee-menu-card:hover .coffee-menu-card-img {
-        background-size: 110%;
+        background-size: cover;
     }
 
     .contacts-offer-link-border:hover {
@@ -707,6 +762,54 @@ h2 {
 
     .contact-hover:hover::before {
         width: 0;
+    }
+}
+
+@media all and (max-width: 642px) {
+
+    .offer-container {
+        height: max-content;
+    }
+
+    .tabs {
+        margin-top: 40px                        ;
+    }
+    .coffee-menu-container {
+        grid-template-columns: 1fr;
+    }
+
+    .coffee-menu-tab {
+        height: max-content;
+        margin-bottom: 100px;
+    }
+
+    main {
+        height: max-content;
+    }
+}
+
+
+
+@media all and (max-width: 566px) {
+
+  
+
+    .contacts-container {
+        height: 526px;
+        padding: 20px 16px;
+    }
+
+    .contacts-offer {
+        height: 180px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+
+    .contacts-info {
+        height: 186px;
     }
 }
 

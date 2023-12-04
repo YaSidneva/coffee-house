@@ -648,7 +648,8 @@ footer {
 /* TABLET */
 @media all and (max-width: 768px) {
     .container {
-        width: 768px;
+        max-width: 768px;
+        width: 100%;
     }
 
     nav {
@@ -904,15 +905,33 @@ footer {
     }
 }
 
+@media all and  (max-width: 760px){
+    .about-container {
+        height: max-content;
+    }
+}
 
-/* MOBILE */
-@media all and (max-width: 380px) {
-    .container {
-        width: 380px;
-        padding-left: 16px;
-        padding-right: 16px;
+@media all and  (max-width: 682px){
+    .offer {
+        max-width: 100%;
+        margin-left: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
 
+    .about-images {
+        height: fit-content;
+    }
+}
+
+@media all and  (max-width: 638px){
+   
+    .mobile-app-description{
+        height: 400px;
+    }}
+
+@media all and  (max-width: 545px){
+   
     .enjoy-container {
         height: 552px;
     }
@@ -928,6 +947,79 @@ footer {
     h1 {
         font-size: 42px;
         line-height: 48.3px;
+    }
+
+    .arrow {
+        display: none;
+    }
+
+    .slide-img {
+        height: 348px;
+    }
+
+    .about-imgs {
+        height: 500px;
+    }
+}
+
+@media all and  (max-width: 500px){ 
+    .slide-price {
+        margin-bottom: 40px;
+    }
+
+    .about-imgs {
+        height: 400px;
+    }
+
+}
+
+@media all and  (max-width: 427px){
+    .about-imgs {
+        height: 350px;
+    }
+
+    .mobile-app-container {
+        height: 768px;
+    }
+
+    .mobile-app-description{
+        width: 100%;
+        height: 380px;
+    }
+
+    .mobile-app-btns {
+        flex-direction: column;
+        height: 148px;
+        width: 200px;
+    }
+
+    .mobile-app-btn {
+        height: 64px;
+    }
+
+    h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+@media all and  (max-width: 404px){
+    .offer {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .about-imgs {
+        height: 300px;
+    }
+}
+
+/* MOBILE */
+@media all and (max-width: 380px) {
+    .container {
+        width: 380px;
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
     .favorite-coffee-container {
@@ -965,36 +1057,16 @@ footer {
     }
 
 
-    .arrow {
-        display: none;
-    }
-
     .about-container {
         height: 1580px;
     }
 
     .about-imgs {
         background-size: inherit;
+        height: 590px;
     }
 
-    .mobile-app-container {
-        height: 768px;
-    }
-
-    .mobile-app-description{
-        width: 100%;
-        height: 380px;
-    }
-
-    .mobile-app-btns {
-        flex-direction: column;
-        height: 148px;
-        width: 200px;
-    }
-
-    .mobile-app-btn {
-        height: 64px;
-    }
+    
 
     .contacts-container {
         height: 526px;
