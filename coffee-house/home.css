@@ -808,4 +808,69 @@ footer {
     .contacts-info {
         max-width: none;
     }
+
+    *:hover {
+        cursor: auto;
+    }
+
+    input:hover {
+        cursor: auto;
+    }
+    
+    .burger-menu:hover {
+        cursor: auto;
+    }
+
+    button:hover {
+        cursor: auto;
+    }
+
+    .arrow:hover {
+        background-color: inherit;
+    }
+
+    .arrow:hover path{
+        stroke: #665F55;
+    }
+
+    .slider-controller:hover {
+        cursor: auto;
+    }
+
+    .about-imgs:hover {
+        cursor: auto;
+        background-size: 106%;
+        transition: none;
+    }
+
+    .mobile-app-btn:hover {
+        cursor: auto;
+        background: none;
+        color: #665F55;
+    }
+
+    .mobile-app-btn:hover path {
+        fill: #403F3D;
+        stroke: #403F3D;
+    }
+
+    .contacts-offer-link-border:hover {
+        cursor: auto;
+        background-color: inherit;
+        border: 1px solid #C1B6AD;
+    }
+    
+    .contacts-offer-link-border:hover path {
+        stroke: #E1D4C9;
+        
+    }
+
+    .contact-hover:hover {
+        cursor: auto;
+    }
+
+    .contact-hover:hover::before {
+        cursor: auto;
+        width: 0;
+    }
 }

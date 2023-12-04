@@ -656,6 +656,14 @@ h2 {
         cursor: auto;
     }
 
+    .burger-menu:hover {
+        cursor: auto;
+    }
+
+    input:hover {
+        cursor: auto;
+    }
+
     .tab-item:hover {
         background-color: inherit;
         border-color: #C1B6AD;
@@ -690,6 +698,11 @@ h2 {
     .contacts-offer-link-border:hover path {
         stroke: #E1D4C9;
         
+    }
+
+    
+    .contact-hover:hover {
+        cursor: auto;
     }
 
     .contact-hover:hover::before {
