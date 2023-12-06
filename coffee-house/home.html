@@ -23,30 +23,34 @@
                     <a href="#mobile-app" class="menu-item">Mobile app</a>
                     <a href="#contacts" class="menu-item">Contact us</a>
                 </nav>
-                <div class="coffee-menu"><a href="coffee.html" class="menu-link">
+                <div class="coffee-menu">
+                    <a href="coffee.html" class="menu-link menu-link-burger">
                         <div>Menu</div>
                         <img src="img/coffee-cup.png" alt="coffee-cup">
                     </a>
                 </div>
                 <div class="burger-menu">
 
-                    <div class="burger-icon"><input type="checkbox">
+                    <div class="burger-icon"><input type="checkbox" id="is-check">
                         <div class="bar"></div>
                         <div class="bar"></div>
-                        <div class="burger-menu-open"><div class="burger-nav">
-                            <a href="#">Favorite coffee</a>
-                            <a href="#">About</a>
-                            <a href="#">Mobile app</a>
-                            <a href="#">Contact us</a></div>
-                            <a href="#">Menu</a>
+                        <div class="burger-menu-open">
+                            <div class="burger-nav">
+                                <a href="#favorite-coffee" class="menu-item burger-link">Favorite coffee</a>
+                                <a href="#about" class="menu-item burger-link">About</a>
+                                <a href="#mobile-app" class="menu-item burger-link">Mobile app</a>
+                                <a href="#contacts" class="menu-item burger-link">Contact us</a>
+                            </div>
+                            <a href="coffee.html" class="menu-link menu-link-burger">Menu <img src="img/coffee-cup.png" alt="coffee-cup" class="offer-menu-btn-cup cup-burger">
+                            </a>
+
                         </div>
                     </div>
+
+
                 </div>
 
-                
             </div>
-
-        </div>
     </header>
 
     <main>
@@ -242,6 +246,7 @@
             </div>
         </div>
     </footer>
+    <script src="home.js"></script>
 </body>
 
 </html>
