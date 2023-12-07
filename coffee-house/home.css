@@ -259,6 +259,15 @@ h2 {
     height: 640px;
 }
 
+.slider-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
 .arrow {
     display: flex;
     width: 60px;
@@ -292,12 +301,29 @@ path {
 
 .slide {
     height: 100%;
-    width: 480px;
+    width: 100%;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
+    box-sizing: border-box;
+    transition: transform 0.5s ease-in-out;
+    margin-bottom: 40px;
+}
+
+.left-slide {
+    transform: translateX(-100%);
+}
+
+.central-slide {
+    transform: translateX(0);
+}
+
+.right-slide {
+    transform: translateX(100%);
+    opacity: 0;
 }
 
 .slide-img {
@@ -327,6 +353,7 @@ path {
     width: 144px;
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
 .slider-controller {
