@@ -59,7 +59,7 @@ function sliderCoffee() {
     showSlide();
 }
 
-let rotateCards = () => {
+let rotateCardsRightToLeft = () => {
     const currentSlideLeft = document.querySelector('.left-slide');
     const currentSlideCenter = document.querySelector('.central-slide');
     const currentSlideRight = document.querySelector('.right-slide');
@@ -67,17 +67,42 @@ let rotateCards = () => {
 
     currentSlideLeft.classList.remove('left-slide');
     currentSlideLeft.classList.add('right-slide');
+    currentSlideLeft.style.opacity = "0";
 
     currentSlideCenter.classList.remove('central-slide');
     currentSlideCenter.classList.add('left-slide');
 
     currentSlideRight.classList.remove('right-slide');
     currentSlideRight.classList.add('central-slide');
+    currentSlideRight.style.opacity = "1";
+};
+
+let rotateCardsLeftToRight = () => {
+    const currentSlideLeft = document.querySelector('.left-slide');
+    const currentSlideCenter = document.querySelector('.central-slide');
+    const currentSlideRight = document.querySelector('.right-slide');
+    console.log('rotating...');
+
+    currentSlideLeft.classList.remove('left-slide');
+    currentSlideLeft.classList.add('central-slide');
+    currentSlideLeft.style.opacity = "1";
+
+    currentSlideCenter.classList.remove('central-slide');
+    currentSlideCenter.classList.add('right-slide');
+
+    currentSlideRight.classList.remove('right-slide');
+    currentSlideRight.classList.add('left-slide');
+    currentSlideRight.style.opacity = "0";
 
 };
 
+let arrowLeft = document.querySelector('.arrow-left');
+let arrowRight = document.querySelector('.arrow-right');
 
-let intervalId = setInterval(rotateCards, 5000);
+arrowLeft.addEventListener("click", rotateCardsRightToLeft);
+arrowRight.addEventListener("click", rotateCardsLeftToRight);
+
+let intervalId = setInterval(rotateCardsRightToLeft, 5000);
 
 document.querySelector('.slider').addEventListener('mouseenter', () => {
     clearInterval(intervalId);
@@ -85,7 +110,7 @@ document.querySelector('.slider').addEventListener('mouseenter', () => {
 
 document.querySelector('.slider').addEventListener('mouseleave', () => {
     clearInterval(intervalId);
-    intervalId = setInterval(rotateCards, 5000);
+    intervalId = setInterval(rotateCardsRightToLeft, 5000);
 });
 
 // Вызываем функцию после загрузки страницы
