@@ -1,3 +1,4 @@
+// BURGER MENU
 function closeMenuOnClick() {
     const burgerLinksArr = document.getElementsByClassName('burger-link');
     const checkbox = document.getElementById('is-check');
@@ -13,6 +14,7 @@ function closeMenuOnClick() {
 
 closeMenuOnClick();
 
+// SLIDER
 function sliderCoffee() {
     const listForSlider = [
         { "img": "img/coffee-slider-3.png", "title": "Ice coffee", "text": "A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.", "price": "$4.50" },
@@ -55,7 +57,6 @@ function sliderCoffee() {
         currentSlideIndex = (currentSlideIndex + 1) % listForSlider.length;
     };
 
-    // Вызываем showSlide для отображения первого слайда
     showSlide();
 }
 
@@ -108,11 +109,58 @@ document.querySelector('.slider').addEventListener('mouseenter', () => {
     clearInterval(intervalId);
 });
 
+document.querySelector('.slider').addEventListener('touchmove', () => {
+    clearInterval(intervalId);
+});
+
 document.querySelector('.slider').addEventListener('mouseleave', () => {
     clearInterval(intervalId);
     intervalId = setInterval(rotateCardsRightToLeft, 5000);
 });
 
-// Вызываем функцию после загрузки страницы
+
+
 document.addEventListener("DOMContentLoaded", sliderCoffee);
 
+
+// MOBILE SWIPE
+function mobileSwipe() {
+    let startX;
+    let startY;
+    let distX;
+    let distY;
+    const threshold = 50; // Минимальное расстояние для срабатывания события "swipe"
+
+    const swipeElement = document.querySelector('.slider')
+    console.log(swipeElement);
+
+    swipeElement.addEventListener('touchstart', (e) => {
+        const touchObj = e.changedTouches[0];
+        startX = touchObj.pageX;
+        startY = touchObj.pageY;
+    });
+
+    swipeElement.addEventListener('touchmove', (e) => {
+        e.preventDefault();
+        const touchObj = e.changedTouches[0];
+        distX = touchObj.pageX - startX;
+        distY = touchObj.pageY - startY;
+    });
+
+    swipeElement.addEventListener('touchend', (e) => {
+        if (Math.abs(distX) >= threshold || Math.abs(distY) >= threshold) {
+            // Здесь вызывайте ваш обработчик события "swipe"
+            if (Math.abs(distX) > Math.abs(distY)) {
+                if (distX > 0) {
+                    // Swipe вправо
+                    rotateCardsLeftToRight();
+                } else {
+                    // Swipe влево
+                    rotateCardsRightToLeft();
+                }
+            } 
+        }
+    });
+}
+
+mobileSwipe();

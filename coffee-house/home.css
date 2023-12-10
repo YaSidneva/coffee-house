@@ -1114,6 +1114,7 @@ footer {
 
     .slider {
         height: 576px;
+        justify-content: center;
     }
 
     .slide {
