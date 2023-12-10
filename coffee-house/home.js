@@ -77,7 +77,16 @@ let rotateCards = () => {
 };
 
 
-setInterval(rotateCards, 5000);
+let intervalId = setInterval(rotateCards, 5000);
+
+document.querySelector('.slider').addEventListener('mouseenter', () => {
+    clearInterval(intervalId);
+});
+
+document.querySelector('.slider').addEventListener('mouseleave', () => {
+    clearInterval(intervalId);
+    intervalId = setInterval(rotateCards, 5000);
+});
 
 // Вызываем функцию после загрузки страницы
 document.addEventListener("DOMContentLoaded", sliderCoffee);
